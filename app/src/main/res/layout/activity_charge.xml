@@ -35,255 +35,238 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_width="417dp"
+        android:layout_height="822dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="169dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:text="شماره تلفن همراه خود را وارد کنید"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="169dp">
 
-            <EditText
-                android:id="@+id/txtMobileNo"
-                android:layout_width="381dp"
-                android:layout_height="65dp"
-                android:layout_margin="20dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/background_button"
-                android:drawableStart="@drawable/sim"
-                android:drawablePadding="5dp"
-                android:ems="10"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:hint="شماره موبایل"
-                android:inputType="numberDecimal"
-                android:maxLength="11"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.533"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView10"
-                app:layout_constraintVertical_bias="0.847"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="157dp">
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="اپراتور را انتخاب کنید"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="403dp"
-                android:layout_height="122dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <TextView
+                    android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="18dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/background_button">
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="شماره تلفن همراه خود را وارد کنید"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txtMobileNo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imgHamrahAval"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_margin="20dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/hamrahavval" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <EditText
+                    android:id="@+id/txtMobileNo"
+                    android:layout_width="381dp"
+                    android:layout_height="65dp"
+                    android:layout_margin="20dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/background_button"
+                    android:drawableStart="@drawable/sim"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:hint="شماره موبایل"
+                    android:inputType="numberDecimal"
+                    android:maxLength="11"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    app:layout_constraintVertical_bias="0.847"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="157dp">
+
+                <TextView
+                    android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="18dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/background_button">
+                    android:text="اپراتور را انتخاب کنید"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imgIrancel"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_margin="20dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/irancel" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="18dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/background_button">
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal"
+                    android:textDirection="rtl"
+                    app:flow_horizontalAlign="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11">
 
-                    <ImageView
-                        android:id="@+id/imgRigtel"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_margin="20dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/rightel" />
+                    <RadioButton
+                        android:id="@+id/rdoHamrahAval"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/hamrahavval"
+                        android:button="@drawable/background_button"
+                        android:minHeight="48dp"
+                        android:scrollHorizontally="false" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <RadioButton
+                        android:id="@+id/rdoIrancell"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/irancell"
+                        android:button="@drawable/background_button"
+                        android:minHeight="48dp" />
 
-            </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/rdoRightel"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rightel"
+                        android:button="@drawable/background_button"
+                        android:minHeight="48dp" />
+                </RadioGroup>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="409dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="448dp">
 
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="مبلغ شارژ را انتخاب کنید"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <RadioGroup
-                android:id="@+id/radioGroup2"
-                android:layout_width="115dp"
-                android:layout_height="297dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layoutDirection="rtl"
-                app:layout_constraintBottom_toTopOf="@+id/button3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.24"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView12">
-
-                <RadioButton
-                    android:id="@+id/rdo20000"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="20000"
-                    android:textSize="16sp" />
+                    android:text="مبلغ شارژ را انتخاب کنید"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <RadioButton
-                    android:id="@+id/rdo50000"
-                    android:layout_width="match_parent"
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="115dp"
+                    android:layout_height="297dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layoutDirection="rtl"
+                    app:layout_constraintBottom_toTopOf="@+id/btnBuy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                    <RadioButton
+                        android:id="@+id/rdo20000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="20000"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdo50000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="50000"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdo100000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="100000"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdo200000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="200000"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdo500000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="500000"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoArbitrary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="مبلغ دلخواه"
+                        android:textSize="16sp" />
+
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/txtArbitrary"
+                    android:layout_width="146dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/background_button"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+                    app:layout_constraintHorizontal_bias="0.552"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.778"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/btnBuy"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="50000"
-                    android:textSize="16sp" />
+                    android:layout_margin="20dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="32dp"
+                    android:text="خرید شارژ"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <RadioButton
-                    android:id="@+id/rdo100000"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="100000"
-                    android:textSize="16sp" />
-
-                <RadioButton
-                    android:id="@+id/rdo200000"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="200000"
-                    android:textSize="16sp" />
-
-                <RadioButton
-                    android:id="@+id/rdo500000"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="500000"
-                    android:textSize="16sp" />
-
-                <RadioButton
-                    android:id="@+id/rdoArbitrary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="مبلغ دلخواه"
-                    android:textSize="16sp" />
-
-            </RadioGroup>
-
-            <EditText
-                android:id="@+id/txtArbitrary"
-                android:layout_width="146dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/background_button"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
-                app:layout_constraintHorizontal_bias="0.552"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.778"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/btnBuy"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="32dp"
-                android:text="خرید شارژ"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

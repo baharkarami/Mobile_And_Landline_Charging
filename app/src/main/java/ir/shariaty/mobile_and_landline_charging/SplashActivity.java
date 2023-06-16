@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import ir.shariaty.mobile_and_landline_charging.databinding.ActivityMainBinding;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -13,8 +15,6 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        getSupportActionBar().hide();
-        
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
