@@ -22,8 +22,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblToolbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="خرید شارژ"
@@ -49,11 +49,12 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mobileNoLayout"
                 android:layout_width="match_parent"
                 android:layout_height="169dp">
 
-                <TextView
-                    android:id="@+id/textView10"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblEnterMobileNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -67,7 +68,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/txtMobileNo"
                     android:layout_width="0dp"
                     android:layout_height="73dp"
@@ -85,17 +86,18 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/lblEnterMobileNo"
                     app:layout_constraintVertical_bias="0.847"
                     tools:ignore="SpeakableTextPresentCheck" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/operatorLayout"
                 android:layout_width="match_parent"
                 android:layout_height="157dp">
 
-                <TextView
-                    android:id="@+id/textView11"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblChooseOperator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="اپراتور را انتخاب کنید"
@@ -119,7 +121,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11">
+                    app:layout_constraintTop_toBottomOf="@+id/lblChooseOperator">
 
                     <RadioButton
                         android:id="@+id/rdoHamrahAval"
@@ -153,12 +155,13 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buyLayout"
                 android:layout_width="match_parent"
                 android:layout_height="448dp">
 
 
-                <TextView
-                    android:id="@+id/textView12"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblChoodeAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="مبلغ شارژ را انتخاب کنید"
@@ -178,7 +181,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.51"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView12">
+                    app:layout_constraintTop_toBottomOf="@+id/lblChoodeAmount">
 
                     <RadioButton
                         android:id="@+id/rdo20000"
@@ -236,7 +239,7 @@
 
                 </RadioGroup>
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/txtArbitrary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -253,7 +256,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnBuy"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -261,7 +264,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="32dp"
-                    android:background="#003366"
+                    android:background="@drawable/btn_back"
                     android:text="خرید شارژ"
                     android:textColor="#F5F5F5	"
                     android:textSize="20sp"

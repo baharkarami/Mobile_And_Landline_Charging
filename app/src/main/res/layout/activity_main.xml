@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,14 +20,14 @@
             android:orientation="vertical" >
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
+                android:id="@+id/totleLayout"
                 android:layout_width="match_parent"
                 android:layout_height="265dp"
 
                 android:background="@drawable/background_top">
 
-                <TextView
-                    android:id="@+id/textView1"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="52dp"
@@ -42,14 +42,14 @@
                     app:layout_constraintVertical_bias="1.0"
                     tools:ignore="UnknownId" />
 
-                <ImageView
-                    android:id="@+id/imageView1"
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgTitle"
                     android:layout_width="410dp"
-                    android:layout_height="240dp"
+                    android:layout_height="235dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/textView1"
+                    app:layout_constraintStart_toStartOf="@+id/lblTitle"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/top" />
@@ -75,7 +75,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageButton
+                        <androidx.appcompat.widget.AppCompatImageButton
                             android:id="@+id/btnBuyCharge"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -92,7 +92,7 @@
                             app:srcCompat="@mipmap/smartphone"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <TextView
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/lblBuyCharge"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageButton
+                        <androidx.appcompat.widget.AppCompatImageButton
                             android:id="@+id/btnPayBill"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -130,7 +130,7 @@
                             app:srcCompat="@mipmap/phone"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <TextView
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/lblPayBill"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageButton
+                        <androidx.appcompat.widget.AppCompatImageButton
                             android:id="@+id/btnBuyInternet"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -176,7 +176,7 @@
                             app:srcCompat="@mipmap/cellularnetwork"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <TextView
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/lblBuyInternet"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -195,7 +195,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageButton
+                        <androidx.appcompat.widget.AppCompatImageButton
                             android:id="@+id/btnCardExchange"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -213,7 +213,7 @@
                             app:srcCompat="@mipmap/cardexchange"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <TextView
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/lblCardExchange"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -240,7 +240,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageButton
+                        <androidx.appcompat.widget.AppCompatImageButton
                             android:id="@+id/btnInsurance"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -258,7 +258,7 @@
                             app:srcCompat="@mipmap/insuranceagent"
                             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-                        <TextView
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/lblInsurance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -277,7 +277,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageButton
+                        <androidx.appcompat.widget.AppCompatImageButton
                             android:id="@+id/btnWallet"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -295,7 +295,7 @@
                             app:srcCompat="@mipmap/wallet"
                             tools:ignore="SpeakableTextPresentCheck" />
 
-                        <TextView
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/lblWallet"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

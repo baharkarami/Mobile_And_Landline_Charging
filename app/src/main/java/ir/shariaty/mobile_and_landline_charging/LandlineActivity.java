@@ -17,5 +17,6 @@ public class LandlineActivity extends AppCompatActivity {
 
         binding=ActivityLandlineBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
     }
 }
