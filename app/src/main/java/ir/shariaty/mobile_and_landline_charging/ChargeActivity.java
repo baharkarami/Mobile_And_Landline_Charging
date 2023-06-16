@@ -4,17 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import ir.shariaty.mobile_and_landline_charging.databinding.ActivityChargeBinding;
 import ir.shariaty.mobile_and_landline_charging.databinding.ActivityMainBinding;
 
 public class ChargeActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
+    ActivityChargeBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding=ActivityMainBinding.inflate(getLayoutInflater());
+        binding=ActivityChargeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
     }
 }

@@ -12,12 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="AI picture generator"
-        android:background="#6200ee"
+        android:background="#003366"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="خرید شارژ"
-        android:textColor="@color/white"
+        android:textColor="#F5F5F5	"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,8 +36,8 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
     <ScrollView
-        android:layout_width="417dp"
-        android:layout_height="822dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,11 +69,9 @@
 
                 <EditText
                     android:id="@+id/txtMobileNo"
-                    android:layout_width="381dp"
-                    android:layout_height="65dp"
+                    android:layout_width="0dp"
+                    android:layout_height="73dp"
                     android:layout_margin="20dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
                     android:background="@drawable/background_button"
                     android:drawableStart="@drawable/sim"
                     android:drawablePadding="5dp"
@@ -102,12 +100,14 @@
                     android:layout_height="wrap_content"
                     android:text="اپراتور را انتخاب کنید"
                     android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/radioGroup3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <RadioGroup
+                    android:id="@+id/radioGroup3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:foregroundGravity="center"
@@ -133,8 +133,8 @@
 
                     <RadioButton
                         android:id="@+id/rdoIrancell"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_margin="10dp"
                         android:background="@drawable/irancell"
                         android:button="@drawable/background_button"
@@ -172,12 +172,11 @@
                     android:layout_width="115dp"
                     android:layout_height="297dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layoutDirection="rtl"
-                    app:layout_constraintBottom_toTopOf="@+id/btnBuy"
+                    app:layout_constraintBottom_toTopOf="@+id/txtArbitrary"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.24"
+                    app:layout_constraintHorizontal_bias="0.51"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView12">
 
@@ -187,6 +186,7 @@
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
                         android:text="20000"
+                        android:textColorLink="	#003366"
                         android:textSize="16sp" />
 
                     <RadioButton
@@ -195,6 +195,7 @@
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
                         android:text="50000"
+                        android:textColorLink="	#003366"
                         android:textSize="16sp" />
 
                     <RadioButton
@@ -203,6 +204,7 @@
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
                         android:text="100000"
+                        android:textColorLink="	#003366"
                         android:textSize="16sp" />
 
                     <RadioButton
@@ -211,6 +213,7 @@
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
                         android:text="200000"
+                        android:textColorLink="	#003366"
                         android:textSize="16sp" />
 
                     <RadioButton
@@ -219,6 +222,7 @@
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
                         android:text="500000"
+                        android:textColorLink="	#003366"
                         android:textSize="16sp" />
 
                     <RadioButton
@@ -227,28 +231,26 @@
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
                         android:text="مبلغ دلخواه"
+                        android:textColorLink="	#003366"
                         android:textSize="16sp" />
 
                 </RadioGroup>
 
                 <EditText
                     android:id="@+id/txtArbitrary"
-                    android:layout_width="146dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="32dp"
                     android:background="@drawable/background_button"
                     android:ems="10"
                     android:inputType="numberDecimal"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
-                    app:layout_constraintHorizontal_bias="0.552"
+                    android:textSize="20sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/btnBuy"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.778"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                 <Button
@@ -259,7 +261,9 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="32dp"
+                    android:background="#003366"
                     android:text="خرید شارژ"
+                    android:textColor="#F5F5F5	"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="52dp"
                     android:text="آسان پرداخت"
-                    android:textColor="@color/white"
+                    android:textColor="#F5F5F5	"
                     android:textSize="34sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
                 <ImageView
                     android:id="@+id/imageView1"
                     android:layout_width="410dp"
-                    android:layout_height="246dp"
+                    android:layout_height="240dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -70,69 +70,77 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_margin="12dp"
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageView
-                            android:id="@+id/imgBuyCharge"
+                        <ImageButton
+                            android:id="@+id/btnBuyCharge"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="16dp"
+                            android:background="#F5F5F5"
+                            android:clickable="true"
                             app:layout_constraintBottom_toTopOf="@+id/lblBuyCharge"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@mipmap/smartphone" />
+                            app:srcCompat="@mipmap/smartphone"
+                            tools:ignore="SpeakableTextPresentCheck" />
 
                         <TextView
                             android:id="@+id/lblBuyCharge"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
+                            android:layout_marginStart="32dp"
                             android:text="خرید شارژ"
                             android:textSize="20sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imgBuyCharge"
+                            app:layout_constraintEnd_toEndOf="@+id/btnBuyCharge"
+                            app:layout_constraintHorizontal_bias="0.606"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imgBuyCharge" />
+                            app:layout_constraintTop_toBottomOf="@+id/btnBuyCharge" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_margin="12dp"
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageView
-                            android:id="@+id/imgPayBill"
+                        <ImageButton
+                            android:id="@+id/btnPayBill"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="8dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="#F5F5F5"
+                            android:clickable="true"
                             app:layout_constraintBottom_toTopOf="@+id/lblPayBill"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.436"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@mipmap/phone" />
+                            app:srcCompat="@mipmap/phone"
+                            tools:ignore="SpeakableTextPresentCheck" />
 
                         <TextView
                             android:id="@+id/lblPayBill"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
+                            android:layout_marginStart="32dp"
                             android:text="قبض تلفن ثابت"
                             android:textSize="20sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imgPayBill"
+                            app:layout_constraintEnd_toEndOf="@+id/btnPayBill"
+                            app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imgPayBill" />
+                            app:layout_constraintTop_toBottomOf="@+id/btnPayBill" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
@@ -145,59 +153,65 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_margin="12dp"
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageView
-                            android:id="@+id/imgBuyInternet"
+                        <ImageButton
+                            android:id="@+id/btnBuyInternet"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="8dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="#F5F5F5"
+                            android:clickable="true"
                             app:layout_constraintBottom_toTopOf="@+id/lblBuyInternet"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.436"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@mipmap/cellularnetwork" />
+                            app:srcCompat="@mipmap/cellularnetwork"
+                            tools:ignore="SpeakableTextPresentCheck" />
 
                         <TextView
                             android:id="@+id/lblBuyInternet"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
+                            android:layout_marginStart="32dp"
                             android:text="بسته اینترنت"
                             android:textSize="20sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imgBuyInternet"
+                            app:layout_constraintEnd_toEndOf="@+id/btnBuyInternet"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imgBuyInternet" />
+                            app:layout_constraintTop_toBottomOf="@+id/btnBuyInternet" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_margin="12dp"
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageView
-                            android:id="@+id/imgCardExchange"
+                        <ImageButton
+                            android:id="@+id/btnCardExchange"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="8dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="#F5F5F5"
+                            android:clickable="true"
                             app:layout_constraintBottom_toTopOf="@+id/lblCardExchange"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.436"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@mipmap/cardexchange" />
+                            app:srcCompat="@mipmap/cardexchange"
+                            tools:ignore="SpeakableTextPresentCheck" />
 
                         <TextView
                             android:id="@+id/lblCardExchange"
@@ -206,9 +220,9 @@
                             android:layout_marginStart="33dp"
                             android:text="کارت به کارت"
                             android:textSize="20sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imgCardExchange"
+                            app:layout_constraintEnd_toEndOf="@+id/btnCardExchange"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imgCardExchange" />
+                            app:layout_constraintTop_toBottomOf="@+id/btnCardExchange" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
@@ -221,36 +235,39 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_margin="12dp"
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageView
-                            android:id="@+id/imgInsurance"
+                        <ImageButton
+                            android:id="@+id/btnInsurance"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
+                            android:background="#F5F5F5"
+                            android:clickable="true"
                             app:layout_constraintBottom_toTopOf="@+id/lblInsurance"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.436"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@mipmap/insuranceagent" />
+                            app:srcCompat="@mipmap/insuranceagent"
+                            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
                         <TextView
                             android:id="@+id/lblInsurance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
+                            android:layout_marginStart="32dp"
                             android:text="بیمه"
                             android:textSize="20sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imgInsurance"
+                            app:layout_constraintEnd_toEndOf="@+id/btnInsurance"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imgInsurance" />
+                            app:layout_constraintTop_toBottomOf="@+id/btnInsurance" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -260,31 +277,34 @@
                         android:layout_weight="1"
                         android:background="@drawable/background_button">
 
-                        <ImageView
-                            android:id="@+id/imgWallet"
+                        <ImageButton
+                            android:id="@+id/btnWallet"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="8dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="#F5F5F5"
+                            android:clickable="true"
                             app:layout_constraintBottom_toTopOf="@+id/lblWallet"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.436"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@mipmap/wallet" />
+                            app:srcCompat="@mipmap/wallet"
+                            tools:ignore="SpeakableTextPresentCheck" />
 
                         <TextView
                             android:id="@+id/lblWallet"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="33dp"
+                            android:layout_marginStart="32dp"
                             android:text="موجودی"
                             android:textSize="20sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imgWallet"
+                            app:layout_constraintEnd_toEndOf="@+id/btnWallet"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imgWallet" />
+                            app:layout_constraintTop_toBottomOf="@+id/btnWallet" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>

@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="AI picture generator"
-        android:background="#6200ee"
+        android:background="#003366"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="قبض تلفن ثابت"
-        android:textColor="@color/white"
+        android:textColor="#F5F5F5	"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +41,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +79,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="شماره تلفن ثابت خود را وارد کن"
-                    android:textColor="@color/black"
                     android:textSize="20dp"
                     app:layout_constraintBottom_toTopOf="@id/txtLandlineNo"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -88,8 +89,8 @@
                 <EditText
                     android:id="@+id/txtLandlineNo"
                     android:layout_width="0dp"
-                    android:layout_height="65dp"
-                    android:layout_margin="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/background_button"
                     android:drawableStart="@drawable/phone"
@@ -113,7 +114,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
+                    android:background="	#003366"
                     android:text="استعلام"
+                    android:textColor="#F5F5F5	"
+                    android:textColorHighlight="#F5F5F5	"
+                    android:textColorLink="#F5F5F5	"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -127,92 +132,70 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="425dp"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:visibility="visible">
-
-                <Button
-                    android:id="@+id/btnPayBill"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:text="پرداخت"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view3"
-                    app:layout_constraintVertical_bias="0.185" />
-
-                <View
-                    android:id="@+id/view2"
-                    android:layout_width="359dp"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/background_button"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.625"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.094" />
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="دوره پرداخت را انتخاب کن"
-                    android:textColor="@color/black"
                     android:textSize="20dp"
-                    app:layout_constraintBottom_toTopOf="@+id/view2"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.502"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="12dp"
-                    android:text="میان دوره"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    app:layout_constraintEnd_toEndOf="@+id/view2"
-                    app:layout_constraintStart_toEndOf="@+id/radioGroup"
-                    app:layout_constraintTop_toTopOf="@+id/view2" />
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="359dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
 
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="پایان دوره"
-                    android:textColor="@color/black"
                     android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="@+id/view2"
                     app:layout_constraintEnd_toEndOf="@+id/view2"
+                    app:layout_constraintHorizontal_bias="0.516"
                     app:layout_constraintStart_toEndOf="@+id/radioGroup"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView8"
+                    app:layout_constraintVertical_bias="0.724" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ریال"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view2"
+                    app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+                    app:layout_constraintHorizontal_bias="0.588"
+                    app:layout_constraintStart_toStartOf="@+id/view2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                    app:layout_constraintVertical_bias="0.551" />
 
                 <RadioGroup
                     android:id="@+id/radioGroup"
                     android:layout_width="59dp"
                     android:layout_height="119dp"
+                    android:layout_marginTop="10dp"
                     android:foregroundGravity="left"
                     android:layoutDirection="rtl"
                     app:layout_constraintBottom_toBottomOf="@+id/view2"
-                    app:layout_constraintEnd_toEndOf="@+id/view2"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="@+id/view2"
-                    app:layout_constraintTop_toTopOf="@+id/view2"
-                    app:layout_constraintVertical_bias="0.32999998">
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
 
                     <RadioButton
                         android:id="@+id/rdoMidTerm"
@@ -237,46 +220,47 @@
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="48dp"
+                    android:layout_marginTop="36dp"
                     android:text="ریال"
-                    android:textColor="@color/black"
                     android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView5"
                     app:layout_constraintEnd_toStartOf="@+id/radioGroup"
-                    app:layout_constraintHorizontal_bias="0.635"
+                    app:layout_constraintHorizontal_bias="0.583"
                     app:layout_constraintStart_toStartOf="@+id/view2"
-                    app:layout_constraintTop_toTopOf="@+id/view2"
-                    app:layout_constraintVertical_bias="0.322" />
+                    app:layout_constraintTop_toTopOf="@+id/view2" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="48dp"
-                    android:layout_marginBottom="36dp"
-                    android:text="ریال"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/view2"
-                    app:layout_constraintEnd_toStartOf="@+id/radioGroup"
-                    app:layout_constraintHorizontal_bias="0.635"
-                    app:layout_constraintStart_toStartOf="@+id/view2" />
+                    android:layout_marginTop="36dp"
+                    android:text="میان دوره"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view2"
+                    app:layout_constraintHorizontal_bias="0.505"
+                    app:layout_constraintStart_toEndOf="@+id/radioGroup"
+                    app:layout_constraintTop_toTopOf="@+id/view2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:visibility="visible">
 
                 <View
                     android:id="@+id/view3"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="88dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
                     android:layout_weight="1"
                     android:background="@drawable/background_button"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.225"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view2"
-                    app:layout_constraintVertical_bias="0.136" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -284,7 +268,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:text="شناسه پرداخت"
-                    android:textColor="@color/black"
                     android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="@+id/view3"
                     app:layout_constraintEnd_toEndOf="@+id/view3"
@@ -304,6 +287,26 @@
                     app:layout_constraintStart_toStartOf="@+id/view3"
                     app:layout_constraintTop_toTopOf="@+id/view3"
                     app:layout_constraintVertical_bias="0.493" />
+
+                <Button
+                    android:id="@+id/btnPayBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="	#003366"
+                    android:text="پرداخت"
+                    android:textColor="#F5F5F5	"
+                    android:textColorHighlight="#F5F5F5	"
+                    android:textColorLink="#F5F5F5	"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view3"
+                    app:layout_constraintVertical_bias="0.185" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
