@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/lblEndTermAmount"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
@@ -164,30 +163,16 @@
                     app:layout_constraintTop_toTopOf="@+id/viewEndTerm" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/lblEndTermAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="32dp"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toTopOf="@+id/lblEndPaymentId"
                     app:layout_constraintEnd_toStartOf="@+id/lblEndTerm"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.443" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/lblRialEnd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:text="ریال"
-                    android:textSize="20sp"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toTopOf="@+id/lblEndPaymentId"
-                    app:layout_constraintEnd_toStartOf="@+id/textView2"
-                    app:layout_constraintHorizontal_bias="0.506"
                     app:layout_constraintStart_toStartOf="@+id/viewEndTerm"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.448" />
+                    app:layout_constraintVertical_bias="0.443" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/lblPaymenTerm"
@@ -252,14 +237,11 @@
                     android:id="@+id/lblPaymentMid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
                     android:layout_marginEnd="24dp"
                     android:text="شناسه پرداخت"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="@+id/viewMidTerm"
                     app:layout_constraintEnd_toEndOf="@+id/viewMidTerm"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/lblMidPaymentId"
                     app:layout_constraintTop_toTopOf="@+id/viewMidTerm"
                     app:layout_constraintVertical_bias="0.721" />
 
@@ -268,27 +250,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="@+id/viewMidTerm"
-                    app:layout_constraintEnd_toEndOf="@+id/viewMidTerm"
+                    app:layout_constraintEnd_toStartOf="@+id/lblPaymentMid"
                     app:layout_constraintStart_toStartOf="@+id/viewMidTerm"
                     app:layout_constraintTop_toTopOf="@+id/viewMidTerm"
-                    app:layout_constraintVertical_bias="0.72" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/lblRialMid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:text="ریال"
-                    android:textSize="20sp"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toTopOf="@+id/lblMidPaymentId"
-                    app:layout_constraintEnd_toStartOf="@+id/lblMidTermAmount"
-                    app:layout_constraintStart_toStartOf="@+id/viewMidTerm"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.439" />
+                    app:layout_constraintVertical_bias="0.715" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/lblMidTermAmount"
@@ -298,6 +265,7 @@
                     android:textSize="20sp"
                     app:layout_constraintBottom_toTopOf="@+id/lblMidPaymentId"
                     app:layout_constraintEnd_toStartOf="@+id/lblaMidTerm"
+                    app:layout_constraintStart_toStartOf="@+id/viewMidTerm"
                     app:layout_constraintTop_toTopOf="@+id/viewMidTerm"
                     app:layout_constraintVertical_bias="0.39" />
 
