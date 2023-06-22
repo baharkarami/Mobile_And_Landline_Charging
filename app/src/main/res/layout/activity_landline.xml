@@ -39,8 +39,8 @@
         tools:ignore="HardcodedText" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,7 +57,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/landlineNoLayout"
                 android:layout_width="match_parent"
-                android:layout_height="214dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1">
 
@@ -77,7 +77,7 @@
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/txtLandlineNo"
-                    android:layout_width="360dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
@@ -133,12 +133,12 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/endTermLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:visibility="visible">
 
                 <View
                     android:id="@+id/viewEndTerm"
-                    android:layout_width="360dp"
+                    android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
                     android:layout_marginStart="32dp"
@@ -209,7 +209,7 @@
 
                 <View
                     android:id="@+id/viewMidTerm"
-                    android:layout_width="360dp"
+                    android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
                     android:layout_marginStart="32dp"
