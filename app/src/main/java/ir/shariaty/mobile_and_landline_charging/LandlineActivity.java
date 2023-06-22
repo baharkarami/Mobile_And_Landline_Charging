@@ -1,6 +1,7 @@
 package ir.shariaty.mobile_and_landline_charging;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -47,9 +48,14 @@ public class LandlineActivity extends AppCompatActivity {
         binding.btnInquiry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String LandlineNo = binding.txtLandlineNo.getText().toString();
 
-                callAPI(LandlineNo);
+                try {
+                    callAPI("{\n" +
+                            "    \"FixedLineNumber\": \"" + binding.txtLandlineNo.getText() + "\"\n" +
+                            "}");
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
@@ -58,18 +64,11 @@ public class LandlineActivity extends AppCompatActivity {
     private void callAPI(String landlineNo) {
         progress(true);
 
-        JSONObject object = new JSONObject();
-
-        try {
-            object.put("FixedLineNumber", landlineNo);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        RequestBody requestBody = RequestBody.create(object.toString(), JSON);
-        Request request = new Request.Builder().url("https://charge.sep.ir/Inquiry/FixedLineBillInquiry")
-                .post(requestBody)
-                .build();
+        RequestBody body = RequestBody.create(JSON, landlineNo);
+        Request request = new Request.Builder()
+                .url("https://charge.sep.ir/Inquiry/FixedLineBillInquiry")
+                .post(body)
+                .build();;
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
@@ -81,15 +80,24 @@ public class LandlineActivity extends AppCompatActivity {
                 try {
                     assert response.body() != null;
 
-                    JSONObject jsonObject = new JSONObject(response.body().string());
+                    String jsonData = response.body().string();
+                    JSONObject jsonObject = new JSONObject(jsonData);
+                    if (jsonObject.getString("code").equals("-16")) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(LandlineActivity.this);
+                        builder.setMessage("هیچ قبض قابل پرداختی برای این تلفن ثابت استعلام شده ثبت نشده است")
+                                .setTitle("قبض یافت نشد!")
+                                .setCancelable(true);
+                        AlertDialog dialog = builder.create();
+                        dialog.show();
+                    } else {
+                        EndTermAmount = jsonObject.getJSONObject("data").getJSONObject("FinalTerm").getString("Amount");
+                        MidTermAmount = jsonObject.getJSONObject("data").getJSONObject("MidTerm").getString("Amount");
+                        EndTermPaymentId = jsonObject.getJSONObject("data").getJSONObject("FinalTerm").getString("PaymentID");
+                        MidTermPaymentId = jsonObject.getJSONObject("data").getJSONObject("MidTerm").getString("PaymentID");
 
-                    EndTermAmount=jsonObject.getJSONObject("data").getJSONObject("FinalTerm").getString("Amount");
-                    MidTermAmount=jsonObject.getJSONObject("data").getJSONObject("MidTerm").getString("Amount");
-                    EndTermPaymentId=jsonObject.getJSONObject("data").getJSONObject("FinalTerm").getString("PaymentID");
-                    MidTermPaymentId=jsonObject.getJSONObject("data").getJSONObject("MidTerm").getString("PaymentID");
-
-                    load(EndTermAmount,MidTermAmount,EndTermPaymentId,MidTermPaymentId);
-                    progress(false);
+                        load(EndTermAmount, MidTermAmount, EndTermPaymentId, MidTermPaymentId);
+                        progress(false);
+                    }
 
                 } catch (IOException | JSONException e) {
                     throw new RuntimeException(e);
