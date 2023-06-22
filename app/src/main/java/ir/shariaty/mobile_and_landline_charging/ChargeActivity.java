@@ -107,7 +107,7 @@ public class ChargeActivity extends AppCompatActivity {
                     load(url);
 
                 } catch (Exception e) {
-                    String error = e.getMessage();
+                    e.getMessage();
                 }
             }
         });

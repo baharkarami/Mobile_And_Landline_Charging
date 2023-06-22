@@ -78,7 +78,7 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/txtLandlineNo"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/background_button"
@@ -134,7 +134,7 @@
                 android:id="@+id/endTermLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <View
                     android:id="@+id/viewEndTerm"
@@ -202,10 +202,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/midTermLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <View
                     android:id="@+id/viewMidTerm"

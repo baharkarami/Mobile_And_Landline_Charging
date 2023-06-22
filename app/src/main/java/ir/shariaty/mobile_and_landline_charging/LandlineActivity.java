@@ -51,15 +51,18 @@ public class LandlineActivity extends AppCompatActivity {
                 callAPI(LandlineNo);
             }
         });
+
     }
 
     private void callAPI(String landlineNo) {
+        progress(true);
+
         JSONObject object = new JSONObject();
 
         try {
             object.put("FixedLineNumber", landlineNo);
         } catch (Exception e) {
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
         RequestBody requestBody = RequestBody.create(object.toString(), JSON);
@@ -83,9 +86,28 @@ public class LandlineActivity extends AppCompatActivity {
                     MidTermPaymentId=jsonObject.getJSONObject("data").getJSONObject("MidTerm").getString("PaymentID");
 
                     load(EndTermAmount,MidTermAmount,EndTermPaymentId,MidTermPaymentId);
+                    progress(false);
 
                 } catch (Exception e) {
                     String error = e.getMessage();
+                }
+            }
+        });
+    }
+
+    private void progress(boolean inProgress) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (inProgress){
+                    binding.endTermLayout.setVisibility(View.GONE);
+                    binding.midTermLayout.setVisibility(View.GONE);
+                    binding.loadingAnimationView.setVisibility(View.VISIBLE);
+                }
+                else {
+                    binding.endTermLayout.setVisibility(View.VISIBLE);
+                    binding.midTermLayout.setVisibility(View.VISIBLE);
+                    binding.loadingAnimationView.setVisibility(View.GONE);
                 }
             }
         });

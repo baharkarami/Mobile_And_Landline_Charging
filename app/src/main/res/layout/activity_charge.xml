@@ -70,7 +70,7 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/txtMobileNo"
                     android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_height="60dp"
                     android:layout_margin="20dp"
                     android:background="@drawable/background_button"
                     android:drawableStart="@drawable/sim"
