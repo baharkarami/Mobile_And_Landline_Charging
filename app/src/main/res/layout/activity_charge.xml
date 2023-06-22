@@ -11,7 +11,6 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints="AI picture generator"
         android:background="#003366"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -125,8 +124,8 @@
 
                     <RadioButton
                         android:id="@+id/rdoHamrahAval"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
                         android:layout_margin="10dp"
                         android:background="@drawable/hamrahavval"
                         android:button="@drawable/background_button"
@@ -135,8 +134,8 @@
 
                     <RadioButton
                         android:id="@+id/rdoIrancell"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
                         android:layout_margin="10dp"
                         android:background="@drawable/irancell"
                         android:button="@drawable/background_button"
@@ -144,8 +143,8 @@
 
                     <RadioButton
                         android:id="@+id/rdoRightel"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
                         android:layout_margin="10dp"
                         android:background="@drawable/rightel"
                         android:button="@drawable/background_button"
@@ -172,12 +171,11 @@
 
                 <RadioGroup
                     android:id="@+id/radioGroup2"
-                    android:layout_width="115dp"
-                    android:layout_height="297dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:layoutDirection="rtl"
-                    app:layout_constraintBottom_toTopOf="@+id/txtArbitrary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.51"
                     app:layout_constraintStart_toStartOf="parent"
@@ -187,6 +185,7 @@
                         android:id="@+id/rdo20000"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:buttonTint="#003366"
                         android:minHeight="48dp"
                         android:text="20000"
                         android:textColorLink="	#003366"
@@ -196,6 +195,7 @@
                         android:id="@+id/rdo50000"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:buttonTint="#003366"
                         android:minHeight="48dp"
                         android:text="50000"
                         android:textColorLink="	#003366"
@@ -205,6 +205,7 @@
                         android:id="@+id/rdo100000"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:buttonTint="#003366"
                         android:minHeight="48dp"
                         android:text="100000"
                         android:textColorLink="	#003366"
@@ -214,6 +215,7 @@
                         android:id="@+id/rdo200000"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:buttonTint="#003366"
                         android:minHeight="48dp"
                         android:text="200000"
                         android:textColorLink="	#003366"
@@ -223,38 +225,13 @@
                         android:id="@+id/rdo500000"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:buttonTint="#003366"
                         android:minHeight="48dp"
                         android:text="500000"
                         android:textColorLink="	#003366"
                         android:textSize="16sp" />
 
-                    <RadioButton
-                        android:id="@+id/rdoArbitrary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minHeight="48dp"
-                        android:text="مبلغ دلخواه"
-                        android:textColorLink="	#003366"
-                        android:textSize="16sp" />
-
                 </RadioGroup>
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/txtArbitrary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_marginBottom="32dp"
-                    android:background="@drawable/background_button"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:textSize="20sp"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toTopOf="@+id/btnBuy"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnBuy"
@@ -270,7 +247,8 @@
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

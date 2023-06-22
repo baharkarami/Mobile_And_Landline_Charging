@@ -67,10 +67,6 @@ public class ChargeActivity extends AppCompatActivity {
                     amount = 200000;
                 else if(binding.rdo500000.isChecked())
                     amount = 500000;
-                else if(binding.rdoArbitrary.isChecked()) {
-                    binding.txtArbitrary.setVisibility(View.VISIBLE);
-                    amount = Integer.parseInt(binding.txtArbitrary.getText().toString());
-                }
 
                 mobileNo = binding.txtMobileNo.getText().toString();
 
@@ -122,8 +118,4 @@ public class ChargeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-    }
 }
