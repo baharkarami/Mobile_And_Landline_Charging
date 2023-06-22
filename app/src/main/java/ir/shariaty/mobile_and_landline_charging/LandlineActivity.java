@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -30,8 +31,8 @@ public class LandlineActivity extends AppCompatActivity {
 
     ActivityLandlineBinding binding;
 
-    Integer EndTermAmount;
-    Integer MidTermAmount;
+    String EndTermAmount;
+    String MidTermAmount;
     String EndTermPaymentId;
     String MidTermPaymentId;
 
@@ -62,7 +63,7 @@ public class LandlineActivity extends AppCompatActivity {
         try {
             object.put("FixedLineNumber", landlineNo);
         } catch (Exception e) {
-//            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            throw new RuntimeException(e);
         }
 
         RequestBody requestBody = RequestBody.create(object.toString(), JSON);
@@ -78,18 +79,20 @@ public class LandlineActivity extends AppCompatActivity {
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 try {
+                    assert response.body() != null;
+
                     JSONObject jsonObject = new JSONObject(response.body().string());
 
-                    EndTermAmount=jsonObject.getJSONObject("data").getJSONObject("FinalTerm").getInt("Amount");
-                    MidTermAmount=jsonObject.getJSONObject("data").getJSONObject("MidTerm").getInt("Amount");
+                    EndTermAmount=jsonObject.getJSONObject("data").getJSONObject("FinalTerm").getString("Amount");
+                    MidTermAmount=jsonObject.getJSONObject("data").getJSONObject("MidTerm").getString("Amount");
                     EndTermPaymentId=jsonObject.getJSONObject("data").getJSONObject("FinalTerm").getString("PaymentID");
                     MidTermPaymentId=jsonObject.getJSONObject("data").getJSONObject("MidTerm").getString("PaymentID");
 
                     load(EndTermAmount,MidTermAmount,EndTermPaymentId,MidTermPaymentId);
                     progress(false);
 
-                } catch (Exception e) {
-                    String error = e.getMessage();
+                } catch (IOException | JSONException e) {
+                    throw new RuntimeException(e);
                 }
             }
         });
@@ -113,7 +116,7 @@ public class LandlineActivity extends AppCompatActivity {
         });
     }
 
-    private void load(Integer endTermAmount, Integer midTermAmount, String endTermPaymentId, String midTermPaymentId) {
+    private void load(String endTermAmount, String midTermAmount, String endTermPaymentId, String midTermPaymentId) {
         binding.lblEndTermAmount.setText(endTermAmount+" ریال");
         binding.lblMidTermAmount.setText(midTermAmount+" ریال");
         binding.lblEndPaymentId.setText(endTermPaymentId);

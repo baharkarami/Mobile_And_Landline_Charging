@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -32,11 +33,10 @@ public class ChargeActivity extends AppCompatActivity {
             = MediaType.get("application/json;charset=utf-8");
 
     OkHttpClient client = new OkHttpClient();
-
     String url;
     String mobileNo;
-    Integer operatorType;
-    Integer amount;
+    String operatorType;
+    String amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,41 +50,41 @@ public class ChargeActivity extends AppCompatActivity {
         binding.btnBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(binding.rdoHamrahAval.isChecked())
-                    operatorType = 1;
-                else if (binding.rdoIrancell.isChecked())
-                    operatorType = 2;
-                else if (binding.rdoRightel.isChecked())
-                    operatorType = 3;
+                if(binding.radioGroupOperator.getCheckedRadioButtonId() == R.id.rdoHamrahAval)
+                    operatorType = "1";
+                else if(binding.radioGroupOperator.getCheckedRadioButtonId() == R.id.rdoIrancell)
+                    operatorType = "2";
+                else
+                    operatorType = "3";
 
-                if (binding.rdo20000.isChecked())
-                    amount = 20000;
-                else if(binding.rdo50000.isChecked())
-                    amount = 50000;
-                else if(binding.rdo100000.isChecked())
-                    amount = 100000;
-                else if(binding.rdo200000.isChecked())
-                    amount = 200000;
-                else if(binding.rdo500000.isChecked())
-                    amount = 500000;
+                if(binding.radioGroupAmount.getCheckedRadioButtonId() == R.id.rdo20000)
+                    amount = "20000";
+                else if (binding.radioGroupAmount.getCheckedRadioButtonId() == R.id.rdo50000)
+                    amount = "50000";
+                else if (binding.radioGroupAmount.getCheckedRadioButtonId() == R.id.rdo100000)
+                    amount = "100000";
+                else if (binding.radioGroupAmount.getCheckedRadioButtonId() == R.id.rdo200000)
+                    amount = "200000";
+                else if (binding.radioGroupAmount.getCheckedRadioButtonId() == R.id.rdo500000)
+                    amount = "500000";
 
-                mobileNo = binding.txtMobileNo.getText().toString();
+                    mobileNo = binding.txtMobileNo.getText().toString();
 
                 callAPI(mobileNo,operatorType,amount);
             }
         });
     }
 
-    private void callAPI(String mobileNo, Integer operatorType, Integer amount) {
+    private void callAPI(String mobileNo, String operatorType, String amount) {
         JSONObject object = new JSONObject();
 
         try {
-            object.put("MobileNo", "09024471819");
-            object.put("OperatorType",2);
-            object.put("AmountPure",20000);
+            object.put("MobileNo", mobileNo);
+            object.put("OperatorType",operatorType);
+            object.put("AmountPure",amount);
             object.put("mid","0");
         } catch (Exception e) {
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            throw new RuntimeException(e);
         }
 
         RequestBody requestBody = RequestBody.create(object.toString(), JSON);
@@ -101,13 +101,13 @@ public class ChargeActivity extends AppCompatActivity {
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 try {
+                    assert response.body() != null;
                     JSONObject jsonObject=new JSONObject(response.body().string());
-                    url = jsonObject.getString("url");
-
+                    url = jsonObject.get("url").toString();
                     load(url);
 
-                } catch (Exception e) {
-                    e.getMessage();
+                } catch (IOException | JSONException e) {
+                    throw new RuntimeException(e);
                 }
             }
         });
@@ -117,5 +117,4 @@ public class ChargeActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
     }
-
 }
