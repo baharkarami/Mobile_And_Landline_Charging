@@ -51,7 +51,7 @@ public class LandlineActivity extends AppCompatActivity {
 
                 try {
                     callAPI("{\n" +
-                            "    \"FixedLineNumber\": \"" + binding.txtLandlineNo.getText() + "\"\n" +
+                            "    \"FixedLineNumber\": \"" + binding.txtLandlineNo.getText().toString() + "\"\n" +
                             "}");
                 } catch (Exception e) {
                     throw new RuntimeException(e);
@@ -84,7 +84,7 @@ public class LandlineActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(jsonData);
                     if (jsonObject.getString("code").equals("-16")) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(LandlineActivity.this);
-                        builder.setMessage("هیچ قبض قابل پرداختی برای این تلفن ثابت استعلام شده ثبت نشده است")
+                        builder.setMessage(" قبض قابل پرداختی برای شماره  استعلام شده ثبت نشده است")
                                 .setTitle("قبض یافت نشد!")
                                 .setCancelable(true);
                         AlertDialog dialog = builder.create();

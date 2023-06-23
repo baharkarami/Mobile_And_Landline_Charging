@@ -70,30 +70,29 @@ public class ChargeActivity extends AppCompatActivity {
                 else if (binding.radioGroupAmount.getCheckedRadioButtonId() == R.id.rdo500000)
                     amount = "500000";
 
-                    mobileNo = binding.txtMobileNo.getText().toString();
 
-                callAPI(mobileNo,operatorType,amount);
+                try {
+                    callAPI("{\n" +
+                            "    \"MobileNo\": \"" + binding.txtMobileNo.getText().toString() + "\",\n" +
+                            "    \"OperatorType\": " + operatorType + ",\n" +
+                            "    \"AmountPure\": " + amount + ",\n" +
+                            "    \"mid\": \"0\"\n" +
+                            "}");
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
             }
         });
     }
 
-    private void callAPI(String mobileNo, String operatorType, String amount) {
-        JSONObject object = new JSONObject();
+    private void callAPI(String data) {
 
-        try {
-            object.put("MobileNo", mobileNo);
-            object.put("OperatorType",operatorType);
-            object.put("AmountPure",amount);
-            object.put("mid","0");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        RequestBody requestBody = RequestBody.create(object.toString(), JSON);
-        Request request = new Request.Builder().url("https://topup.pec.ir/")
-                .post(requestBody)
+        RequestBody body = RequestBody.create(JSON, data);
+        Request request = new Request.Builder()
+                .url("https://topup.pec.ir/")
+                .post(body)
                 .build();
-
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
@@ -104,7 +103,8 @@ public class ChargeActivity extends AppCompatActivity {
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 try {
                     assert response.body() != null;
-                    JSONObject jsonObject=new JSONObject(response.body().string());
+                    String jsonData = response.body().string();
+                    JSONObject jsonObject = new JSONObject(jsonData);
                     url = jsonObject.get("url").toString();
                     load(url);
 
